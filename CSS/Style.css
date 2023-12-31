@@ -29,7 +29,7 @@
 }
 
 .logo-size {
-    width: 6%;
+    width: 20%!important;
 }
 
 .carousel-item img {
@@ -305,9 +305,6 @@
 /* processing end */
 
 @media only screen and (max-width: 360px) {
-    .logo-size {
-        width: 20%;
-    }
     .size {
         width: 40%;
     }
@@ -322,5 +319,11 @@
 @media only screen and (max-width: 768px) {
     .size {
         width: 40%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .logo-size {
+        width: 6%!important;
     }
 }
