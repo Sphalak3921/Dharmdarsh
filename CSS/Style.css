@@ -1,0 +1,326 @@
+/* * {
+    border: 1px solid red;
+} */
+
+:root {
+    --bs-color1: rgb(179, 107, 0);
+    --bs-color2: rgb(227, 247, 176);
+    --bs-color3: rgba(236, 248, 204, 0.416);
+}
+
+.color-1 {
+    color: var(--bs-color1);
+}
+
+.color-1bg {
+    background-color: var(--bs-color1);
+}
+
+.color-2 {
+    color: var(--bs-color2);
+}
+
+.color-2bg {
+    background-color: var(--bs-color2);
+}
+
+.color-3bg {
+    background-color: var(--bs-color3);
+}
+
+.logo-size {
+    width: 6%;
+}
+
+.carousel-item img {
+    height: 100vh !important;
+    object-fit: cover;
+}
+
+.product {
+    border: 2px solid rgb(179, 107, 0);
+}
+
+.btn-order {
+    border: 2px solid rgb(179, 107, 0);
+    background: rgb(227, 247, 176);
+}
+
+.btn-order:hover {
+    color: rgb(255, 249, 249);
+    background: rgb(179, 107, 0);
+}
+
+.size {
+    width: 25%;
+}
+
+.logo {
+    width: 10%;
+}
+
+.fot-log {
+    width: 50%;
+}
+
+.btn-contact {
+    border: 2px solid rgb(179, 107, 0);
+    border-radius: 100%;
+}
+
+.btn-contact:hover {
+    color: rgb(255, 249, 249);
+    background: rgb(179, 107, 0);
+}
+
+
+/* processing */
+
+.pro ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    --hue: 1;
+    --unit: 1rem;
+}
+
+.pro h1 {
+    text-align: center;
+}
+
+.pro p {
+    line-height: 1.3;
+}
+
+.pro .event-date {
+    margin: 0 0 0.25rem;
+    font-weight: bold;
+    color: white;
+}
+
+.pro .event-description {
+    margin: 0;
+    color: var;
+}
+
+.pro li {
+    --height: 7rem;
+    position: relative;
+    display: block;
+    background-color: hsl(calc(var(--hue)*360/36), 100%, 35%);
+    border-color: hsl(calc(var(--hue)*360/20), 90%, 65%);
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.pro li::before {
+    content: "";
+    background-color: inherit;
+    position: absolute;
+    display: block;
+    width: var(--unit);
+    height: var(--unit);
+    top: 100%;
+    left: calc(50% - (var(--unit)/2));
+}
+
+.pro li::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: calc(100% + var(--unit));
+    left: calc(50% - (var(--unit)));
+    border: var(--unit) solid transparent;
+    border-top-color: inherit;
+}
+
+.pro i:last-child::before,
+.pro li:last-child::after {
+    content: none;
+}
+
+.pro li:nth-child(20n+1) {
+    --hue: 1;
+}
+
+.pro li:nth-child(20n+2) {
+    --hue: 2;
+}
+
+.pro li:nth-child(20n+3) {
+    --hue: 3;
+}
+
+.pro li:nth-child(20n+4) {
+    --hue: 4;
+}
+
+.pro li:nth-child(20n+5) {
+    --hue: 5;
+}
+
+.pro li:nth-child(20n+6) {
+    --hue: 6;
+}
+
+.pro li:nth-child(20n+7) {
+    --hue: 7;
+}
+
+.pro li:nth-child(20n+8) {
+    --hue: 8;
+}
+
+.pro li:nth-child(20n+9) {
+    --hue: 9;
+}
+
+.pro li:nth-child(20n+10) {
+    --hue: 10;
+}
+
+.pro li:nth-child(20n+11) {
+    --hue: 11;
+}
+
+@media (min-width: 550px) and (max-width: 899px) {
+    .pro li {
+        margin: 1rem;
+        width: calc(50% - 4rem);
+        float: left;
+        min-height: var(--height);
+    }
+    .pro li:nth-child(4n+3),
+    .pro li:nth-child(4n+4) {
+        float: right;
+    }
+    .pro li:nth-child(4n+1)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: 100%;
+    }
+    .pro li:nth-child(4n+1)::after {
+        top: calc(var(--height)/2);
+        left: calc(100% + (var(--unit)));
+        border: var(--unit) solid transparent;
+        border-left-color: inherit;
+    }
+    .pro li:nth-child(4n+3)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: -1rem;
+    }
+    .pro li:nth-child(4n+3)::after {
+        top: calc(var(--height)/2);
+        left: -3rem;
+        border: var(--unit) solid transparent;
+        border-right-color: inherit;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) {
+    .pro li {
+        margin: 1rem;
+        width: calc(33.33% - 4rem);
+        float: left;
+        min-height: 7rem;
+    }
+    .pro li:nth-child(6n+4),
+    .pro li:nth-child(6n+5),
+    .pro li:nth-child(6n+6) {
+        float: right;
+    }
+    .pro li:nth-child(6n+1)::before,
+    .pro li:nth-child(6n+2)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: 100%;
+    }
+    .pro li:nth-child(6n+1)::after,
+    .pro li:nth-child(6n+2)::after {
+        top: 3.5rem;
+        left: calc(100% + (var(--unit)));
+        border: var(--unit) solid transparent;
+        border-left-color: inherit;
+    }
+    .pro li:nth-child(6n+4)::before,
+    .pro li:nth-child(6n+5)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: -1rem;
+    }
+    .pro li:nth-child(6n+4)::after,
+    .pro li:nth-child(6n+5)::after {
+        top: calc(var(--height)/2);
+        left: -3rem;
+        border: var(--unit) solid transparent;
+        border-right-color: inherit;
+    }
+}
+
+@media (min-width: 1200px) {
+    .pro ol {
+        max-width: 1600px;
+        margin: 0 auto;
+    }
+    .pro li {
+        margin: 1rem;
+        width: calc(25% - 4rem);
+        float: left;
+        min-height: 7rem;
+    }
+    .pro li:nth-child(8n+5),
+    .pro li:nth-child(8n+6),
+    .pro li:nth-child(8n+7),
+    .pro li:nth-child(8n+8) {
+        float: right;
+    }
+    .pro li:nth-child(8n+1)::before,
+    .pro li:nth-child(8n+2)::before,
+    .pro li:nth-child(8n+3)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: 100%;
+    }
+    .pro li:nth-child(8n+1)::after,
+    .pro li:nth-child(8n+2)::after,
+    .pro li:nth-child(8n+3)::after {
+        top: calc(var(--height)/2);
+        left: calc(100% + (var(--unit)));
+        border: var(--unit) solid transparent;
+        border-left-color: inherit;
+    }
+    .pro li:nth-child(8n+5)::before,
+    .pro li:nth-child(8n+6)::before,
+    .pro li:nth-child(8n+7)::before {
+        top: calc(var(--height)/2 + var(--unit)/2);
+        left: -1rem;
+    }
+    .pro li:nth-child(8n+5)::after,
+    .pro li:nth-child(8n+6)::after,
+    .pro li:nth-child(8n+7)::after {
+        top: calc(var(--height)/2);
+        left: -3rem;
+        border: var(--unit) solid transparent;
+        border-right-color: inherit;
+    }
+}
+
+
+/* processing end */
+
+@media only screen and (max-width: 360px) {
+    .logo-size {
+        width: 20%;
+    }
+    .size {
+        width: 40%;
+    }
+    .logo {
+        width: 22%;
+    }
+    .fot-log {
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .size {
+        width: 40%;
+    }
+}
